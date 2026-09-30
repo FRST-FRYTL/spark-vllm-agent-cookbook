@@ -1,0 +1,11 @@
+{
+  "name": "vllm-dgx-spark",
+  "description": "Skill to build, serve and verify Qwen3.8-27B-NVFP4 on a patched vLLM on an NVIDIA DGX Spark for tool-calling agents (experimental), or to adopt and check an existing server",
+  "author": {
+    "name": "FRST-FRYTL"
+  },
+  "homepage": "https://github.com/FRST-FRYTL/spark-vllm-agent-cookbook",
+  "repository": "https://github.com/FRST-FRYTL/spark-vllm-agent-cookbook",
+  "license": "MIT",
+  "keywords": ["vllm", "dgx-spark", "tool-calling", "agents", "local-models"]
+}

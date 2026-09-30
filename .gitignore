@@ -1,0 +1,4 @@
+# build.sh downloads the PR diff and assembles the build context here
+.build/
+__pycache__/
+.pytest_cache/

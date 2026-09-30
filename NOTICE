@@ -1,0 +1,33 @@
+spark-vllm-agent-cookbook
+Copyright (c) 2026 FRST-FRYTL
+
+The files in this repository (scripts, Dockerfile, verify.py, tests, docs, the Claude Code skill and
+plugin manifest) are licensed under the MIT License; see LICENSE.
+
+This repository does not contain or redistribute any container image or model weights. The build
+and serve scripts refer to the following third-party projects, which you obtain yourself and use
+under their own terms:
+
+1. eugr/spark-vllm-docker
+   https://github.com/eugr/spark-vllm-docker
+   Builds the eugr/spark-vllm images (https://hub.docker.com/r/eugr/spark-vllm) that the Dockerfile
+   uses as its base, pinned by digest. The project is licensed under the MIT License
+   (Copyright (c) 2026 Eugene Rakhmatulin). The image itself bundles third-party software (NVIDIA
+   CUDA, PyTorch, vLLM and others) under their own licences. It is pulled from Docker Hub by the
+   user and is not redistributed here. Do not publish images built from it.
+
+2. vLLM
+   https://github.com/vllm-project/vllm
+   Licensed under the Apache License, Version 2.0. build.sh downloads the diff of vLLM pull request
+   #50021 from GitHub at build time, pinned by commit and checked by sha256, and the Dockerfile
+   applies it to the vLLM installed in the base image. The diff is not redistributed here.
+
+3. Qwen3.8-27B-NVFP4 (NVIDIA), a quantization of Qwen/Qwen3.8-27B (Qwen)
+   https://huggingface.co/nvidia/Qwen3.8-27B-NVFP4
+   https://huggingface.co/Qwen/Qwen3.8-27B
+   NVIDIA's model card states the Apache License, Version 2.0. Read the model cards of the
+   quantized and the base model before use; you accept their terms when you download the weights.
+   The weights are downloaded by the user from Hugging Face and are not redistributed here.
+
+Product names such as NVIDIA, DGX Spark, CUDA and Qwen are trademarks of their respective owners.
+Their use here is descriptive and implies no endorsement.
