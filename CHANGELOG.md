@@ -4,6 +4,12 @@ All notable changes to spark-vllm-agent-cookbook. Versions follow
 [Semantic Versioning](https://semver.org/); git tags are `v<version>`. Each release is one squashed
 commit exported from the development workspace.
 
+## [0.1.1] - 2026-10-01
+
+Docs only. The README links [PAN](https://github.com/FRST-FRYTL/pan-agent), the Hermes memory add-on
+this server is the tested stack of, now that it is published. Image, flags, pins and `verify.py` are
+unchanged from 0.1.0.
+
 ## [0.1.0] - 2026-09-29
 
 First public release, a research preview. Tag `v0.1.0`. Experimental: the fresh install is not yet

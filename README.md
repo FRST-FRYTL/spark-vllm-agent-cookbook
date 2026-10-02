@@ -9,7 +9,7 @@ It is for anyone who runs agents against a local model on a Spark: [Hermes Agent
 or any other harness that talks to an OpenAI-compatible endpoint. The server listens at
 `http://localhost:8000/v1` and serves the model as `primary`.
 
-> **Status:** ongoing personal project, research preview, release `v0.1.0`. Experimental. The fresh
+> **Status:** ongoing personal project, research preview, release `v0.1.1`. Experimental. The fresh
 > install is not yet tested end to end: the image, flags and checks are the ones that run the tested
 > server, but nobody has yet gone from a clean machine to a working server with exactly these
 > scripts. Issues are handled best-effort, with no support guarantees. Please report what breaks.
@@ -69,7 +69,7 @@ only for this stack; treat them as orientation, not as a benchmark.
   installing it).
 
 ```bash
-git clone --branch v0.1.0 https://github.com/FRST-FRYTL/spark-vllm-agent-cookbook
+git clone --branch v0.1.1 https://github.com/FRST-FRYTL/spark-vllm-agent-cookbook
 cd spark-vllm-agent-cookbook
 ```
 
@@ -287,8 +287,9 @@ model:
 or with `hermes config set model.provider custom`, `hermes config set model.base_url
 http://localhost:8000/v1` and `hermes config set model.default primary`.
 
-**PAN.** PAN, a memory add-on for Hermes (to be published), uses this server as its tested stack and
-for its memory gate. Once it is available: check the server with `pan doctor --base-url http://localhost:8000/v1 --model primary`,
+**PAN.** [PAN](https://github.com/FRST-FRYTL/pan-agent), a memory add-on for Hermes, uses this server as
+its tested stack and for its memory gate. Check the server with
+`pan doctor --base-url http://localhost:8000/v1 --model primary`,
 then set `models.gate.base_url: http://localhost:8000/v1` and `models.gate.model: primary` in
 `$HERMES_HOME/pan/config.yaml`. The gate and Hermes' main model can share this one server.
 
